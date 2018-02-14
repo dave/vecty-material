@@ -1,10 +1,10 @@
 // https://material.io/components/web/catalog/dialogs/
-package dialog // import "agamigo.io/vecty-material/dialog"
+package dialog
 
 import (
 	"log"
 
-	mdcD "agamigo.io/material/dialog"
+	mdcD "github.com/dave/material/dialog"
 	"github.com/gopherjs/vecty"
 	"github.com/gopherjs/vecty/elem"
 	"github.com/gopherjs/vecty/prop"

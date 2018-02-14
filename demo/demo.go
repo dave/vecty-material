@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"agamigo.io/vecty-material/checkbox"
-	"agamigo.io/vecty-material/dialog"
+	"github.com/dave/vecty-material/checkbox"
+	"github.com/dave/vecty-material/dialog"
 	"github.com/gopherjs/vecty"
 	"github.com/gopherjs/vecty/elem"
 	"github.com/gopherjs/vecty/event"
