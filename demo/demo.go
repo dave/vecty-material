@@ -88,6 +88,6 @@ func testCB(c *checkbox.CB) {
 			c.Checked = true
 		}
 		print(c.Checked)
-		print(c.GetObject().Get("checked"))
+		//print(c.GetObject().Get("checked"))
 	}
 }

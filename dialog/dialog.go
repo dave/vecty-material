@@ -5,6 +5,7 @@ import (
 	"log"
 
 	mdcD "github.com/dave/material/dialog"
+	"github.com/gopherjs/gopherjs/js"
 	"github.com/gopherjs/vecty"
 	"github.com/gopherjs/vecty/elem"
 	"github.com/gopherjs/vecty/prop"
@@ -30,10 +31,7 @@ type D struct {
 
 // New creates a new vecty-material dialog component.
 func New(id string) (*D, error) {
-	c, err := mdcD.New()
-	if err != nil {
-		return nil, err
-	}
+	c := &mdcD.D{}
 	if id == "" {
 		id = DefaultID
 	}
@@ -116,7 +114,7 @@ func (c *D) Render() vecty.ComponentOrHTML {
 // Mount implements the vecty.Mounter interface and calls Start() on the
 // underlying material dialog component.
 func (c *D) Mount() {
-	c.Start()
+	c.Start(js.Global.Get("document").Get("body").Get("firstElementChild"))
 }
 
 // Unmount implements the vecty.Unmounter interface and calls Stop() on the
