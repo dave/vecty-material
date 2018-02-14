@@ -43,7 +43,7 @@ type PageView struct {
 
 // Render implements the vecty.Component interface.
 func (p *PageView) Render() vecty.ComponentOrHTML {
-	vecty.AddStylesheet("mcw.css")
+	vecty.AddStylesheet("https://cdn.rawgit.com/dave/vecty-material/da9e36b3/demo/mcw.css")
 	return elem.Body(
 		elem.Div(
 			vecty.Markup(
